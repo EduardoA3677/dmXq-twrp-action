@@ -4,8 +4,7 @@ on:
   schedule:
   - cron: "0 21 * * 1-5"  # 04:00 AM Thailand/Vietnam (UTC+7)
   - cron: "0 9 * * 1-5"   # 16:00 PM Thailand/Vietnam (UTC+7)
-
-# workflow_dispatch:
+  workflow_dispatch:
   
 jobs:
   build:
@@ -90,11 +89,11 @@ jobs:
     - name: Clone device tree
       run: |
         cd ${GITHUB_WORKSPACE}
-        git clone -b android-12.1 https://github.com/dmXq-twrp-development/android_device_samsung_${{ matrix.target }}.git device/samsung/${{ matrix.target }} > /dev/null 2>&1
+        git clone -b android-12.1 https://github.com/EduardoA3677/android_device_samsung_${{ matrix.target }}.git device/samsung/${{ matrix.target }} > /dev/null 2>&1
         
     - name: Clone common tree
       run: |
-        git clone -b android-12.1 https://github.com/dmXq-twrp-development/android_device_samsung_sm8550-common.git device/samsung/sm8550-common > /dev/null 2>&1
+        git clone -b android-12.1 https://github.com/EduardoA3677/android_device_samsung_sm8550-common.git device/samsung/sm8550-common > /dev/null 2>&1
     
     - name: Setup ccache before build
       run: |
