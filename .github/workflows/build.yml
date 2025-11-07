@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false      
       matrix:
-        target: [b5q, dm1q, dm2q, dm3q, gts9, gts9p, gts9u, gts9wifi, gts9pwifi, gts9uwifi, q5q]
+        target: [dm2q]
 #      max-parallel: 1
 
     steps:
