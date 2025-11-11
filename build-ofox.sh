@@ -97,7 +97,7 @@ compress_image() {
 pack_tar() {
     local image_name="$1"
     local lz4_file="out/target/product/${DEVICE}/${image_name}.img.lz4"
-    local tar_name="twrp-3.7.1_12-0-${DEVICE}.img.tar"
+    local tar_name="OrangeFox_R12.1-${DEVICE}.img.tar"
 
     if [[ -f "$lz4_file" ]]; then
         cp "$lz4_file" .
